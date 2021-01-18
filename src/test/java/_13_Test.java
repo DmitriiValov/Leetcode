@@ -5,12 +5,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class _13_Test {
     private static _13.Solution1 solution1;
-    private static _13.Solution1 solution2;
+    private static _13.Solution2 solution2;
 
     @BeforeClass
     public static void setup() {
         solution1 = new _13.Solution1();
-        solution2 = new _13.Solution1();
+        solution2 = new _13.Solution2();
     }
 
     @Test
