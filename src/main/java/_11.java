@@ -14,14 +14,14 @@ public class _11 {
             int lastValue = height[lastIdx];
             int maxArea = Math.min(firstValue, lastValue) * lastIdx;
             while (true) {
-                if(firstIdx >= lastIdx) {
-                    break;
-                }
                 if (firstValue >= lastValue) {
                     lastValue = height[--lastIdx];
                 }
                 else {
                     firstValue = height[++firstIdx];
+                }
+                if(firstIdx >= lastIdx) {
+                    break;
                 }
                 int area = Math.min(firstValue, lastValue) * (lastIdx - firstIdx);
                 if (area > maxArea) {
