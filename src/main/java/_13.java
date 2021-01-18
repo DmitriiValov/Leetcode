@@ -99,15 +99,14 @@ public class _13 {
             abc.put('D', 500);
             abc.put('M', 1000);
 
+            int prevValue = 0;
             for (int i = 0; i < s.length(); ++i) {
                 int value = abc.get(s.charAt(i));
-                if (i > 0) {
-                    int prevValue = abc.get(s.charAt(i - 1));
-                    if (value > prevValue) {
-                        value -= 2 * prevValue;
-                    }
+                if (value > prevValue) {
+                    value -= 2 * prevValue;
                 }
                 result += value;
+                prevValue = value;
             }
             return result;
         }
