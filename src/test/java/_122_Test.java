@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class _122_Test {
 
-
     private static _122.Solution solution;
 
     @BeforeClass
