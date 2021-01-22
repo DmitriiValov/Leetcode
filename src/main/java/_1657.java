@@ -14,6 +14,36 @@ public class _1657 {
                 return false;
             }
             int alphabetSize = 26;
+            int[] lettersCount1 = new int[alphabetSize];
+            int[] lettersCount2 = new int[alphabetSize];
+
+            for (char ch : word1.toCharArray()) {
+                lettersCount1[ch - 'a']++;
+            }
+            for (char ch : word2.toCharArray()) {
+                lettersCount2[ch - 'a']++;
+            }
+
+            int value1 = 0;
+            int value2 = 0;
+            for(int i = 0; i < alphabetSize; ++i) {
+                value1 ^= lettersCount1[i];
+                value2 ^= lettersCount2[i];
+                if ((lettersCount1[i] == 0) != (lettersCount2[i] == 0)) {
+                    return false;
+                }
+            }
+            return value1 == value2;
+        }
+    }
+
+    public static class Solution1 {
+
+        public boolean closeStrings(String word1, String word2) {
+            if (word1.length() != word2.length()) {
+                return false;
+            }
+            int alphabetSize = 26;
             Set<Integer> lettersSet1 = new HashSet<>();
             Set<Integer> lettersSet2 = new HashSet<>();
 
