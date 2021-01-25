@@ -53,7 +53,6 @@ public class _23 {
             ListNode current = null;
             while (true) {
                 int minIdx = getMinIdx(lists);
-
                 if(result == null) {
                     result = new ListNode(lists[minIdx].val);
                     current = result;
@@ -62,14 +61,7 @@ public class _23 {
                     current.next = new ListNode(lists[minIdx].val);
                     current = current.next;
                 }
-
-                if (lists[minIdx].next != null) {
-                    lists[minIdx] = lists[minIdx].next;
-                }
-                else {
-                    lists[minIdx] = null;
-                }
-
+                lists[minIdx] = lists[minIdx].next;
                 if (needStop(lists)) {
                     break;
                 }
@@ -88,7 +80,7 @@ public class _23 {
                 }
             }
             for (int i = minIdx; i < lists.length; ++i) {
-                if (lists[i] != null && lists[i].val < minvalue.val) {
+                if (lists[i] != null && minvalue != null && lists[i].val < minvalue.val) {
                     minvalue = lists[i];
                     minIdx = i;
                 }
