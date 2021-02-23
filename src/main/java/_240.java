@@ -6,6 +6,7 @@
 public class _240 {
 
     public static class Solution {
+        
         public boolean searchMatrix(int[][] matrix, int target) {
             int m = matrix.length;
             int n = matrix[0].length;
@@ -14,10 +15,10 @@ public class _240 {
             if(target == matrix[0][0]){
                 return true;
             }
-            while (i < m && j >=0) {
+            while (i < m && j >= 0) {
                 if (matrix[i][j] == target) {
                     return true;
-                } else if(matrix[i][j] > target) {
+                } else if (matrix[i][j] > target) {
                     --j;
                 } else {
                     ++i;
