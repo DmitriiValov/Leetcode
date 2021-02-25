@@ -17,7 +17,7 @@ public class _856 {
                     int value =  stack.pop();
                     if (value == 0) {
                         value = 1;
-                        while (!stack.isEmpty() && stack.peek() > 0) {
+                        if (!stack.isEmpty() && stack.peek() > 0) {
                             value += stack.pop();
                         }
                         stack.push(value);
@@ -25,7 +25,7 @@ public class _856 {
                     else {
                         stack.pop();
                         value = value * 2;
-                        while (!stack.isEmpty() && stack.peek() > 0) {
+                        if (!stack.isEmpty() && stack.peek() > 0) {
                             value += stack.pop();
                         }
                         stack.push(value);
