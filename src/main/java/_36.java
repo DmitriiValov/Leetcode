@@ -16,9 +16,9 @@ public class _36 {
             List<Set<Integer>> cols = new ArrayList<>();
             List<Set<Integer>> cells = new ArrayList<>();
             for (int i = 0; i < 9; ++i) {
-                rows.add(new HashSet<>());
-                cols.add(new HashSet<>());
-                cells.add(new HashSet<>());
+                rows.add(new HashSet<Integer>());
+                cols.add(new HashSet<Integer>());
+                cells.add(new HashSet<Integer>());
             }
 
             for (int i = 0; i < board.length; ++i) {
