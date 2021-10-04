@@ -15,9 +15,8 @@ public class _70 {
             int val1 = 1;
             int val2 = 2;
             for (int i = 3; i <= n; ++i) {
-                int temp = val1 + val2;
-                val1 = val2;
-                val2 = temp;
+                val2 += val1;
+                val1 = val2 - val1;
             }
             return val2;
         }
