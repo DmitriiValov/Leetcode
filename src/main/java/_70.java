@@ -9,9 +9,7 @@ public class _70 {
     public static class Solution {
 
         public int climbStairs(int n) {
-            if(n < 3) {
-                return n;
-            }
+            if(n < 3) return n;
             int val1 = 1;
             int val2 = 2;
             for (int i = 3; i <= n; ++i) {
