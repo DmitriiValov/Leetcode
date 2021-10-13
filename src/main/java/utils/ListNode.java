@@ -3,7 +3,7 @@ package utils;
 import java.util.Objects;
 
 public class ListNode {
-    int val;
+    public int val;
     public ListNode next;
 
     public ListNode(int x) {
