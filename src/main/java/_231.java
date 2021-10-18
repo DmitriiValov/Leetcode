@@ -17,7 +17,7 @@ public class _231 {
             return true;
         }
 
-        public boolean isPowerOfTwo(int n) {
+        public boolean isPowerOfTwo3(int n) {
             if (n <= 0) return false;
             String s = Integer.toBinaryString(n);
             for (int i = 1; i < s.length(); ++i) {
@@ -26,6 +26,20 @@ public class _231 {
                 }
             }
             return true;
+        }
+
+        public boolean isPowerOfTwo(int n) {
+            if (n <= 0) return false;
+            String s = Integer.toBinaryString(n);
+            int result = 0;
+            int mask = 1;
+            for (int i = 0; i < s.length(); i++) {
+                if ((n & mask) != 0) {
+                    result++;
+                }
+                mask *= 2;
+            }
+            return result == 1;
         }
     }
 }
