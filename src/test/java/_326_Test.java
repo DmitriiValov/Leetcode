@@ -35,4 +35,10 @@ public class _326_Test {
         int n = 1;
         assertThat(SOLUTION.isPowerOfThree(n)).isTrue();
     }
+
+    @Test
+    public void test6() {
+        int n = 6;
+        assertThat(SOLUTION.isPowerOfThree(n)).isFalse();
+    }
 }
